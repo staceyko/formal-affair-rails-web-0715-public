@@ -14,4 +14,11 @@ class ConcretesController < ApplicationController
   def update
     render nothing: true
   end
+
+  private
+
+  def strong_params
+    params.require(:concretes).permit(:mix_type, :color, :psi, :cost_per_yard)
+  end
+
 end

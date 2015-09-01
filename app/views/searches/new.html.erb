@@ -1,1 +1,8 @@
 <!-- Your form goes here! -->
+<form action="/searches" method="POST">
+   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+   <input name="q" type="text">
+   <input type="submit" value ="Search">
+ </form>
+
+<%#how to know form action should go to "/searches"? use rake routes in terminal.%> 
